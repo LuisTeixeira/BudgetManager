@@ -1,5 +1,7 @@
 package com.lmteixeira.budgetmanager.profile;
 
+import com.lmteixeira.budgetmanager.model.Profile;
+
 import java.util.List;
 
 /**
@@ -8,11 +10,13 @@ import java.util.List;
 
 public interface ProfileInteractor {
 
-    interface OnFinishedListenet {
-        void profilesLoaded(List<String> profiles);
+    interface OnFinishedListener {
+        void profilesLoaded(List<Profile> profiles);
+
+        void profileAdded();
     }
 
-    void getProfiles();
+    void getProfiles(OnFinishedListener listener);
 
-    
+    void addProfile(OnFinishedListener listener);
 }
