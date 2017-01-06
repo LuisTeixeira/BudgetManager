@@ -5,4 +5,10 @@ package com.lmteixeira.budgetmanager.profile;
  */
 
 public interface ProfilePresenter {
+
+    void onResume();
+
+    void addProfile();
+
+    void onDestroy();
 }
